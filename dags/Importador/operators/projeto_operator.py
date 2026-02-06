@@ -1,4 +1,3 @@
-from airflow.utils.decorators import apply_defaults
 from concurrent.futures import ThreadPoolExecutor
 from .fapes2conecta_operator import Fapes2ConectaOperator
 from dateutil import parser
@@ -30,7 +29,6 @@ class ProjetoOperator(Fapes2ConectaOperator):
                 "AreaTecnica"
             ]
     
-    @apply_defaults
     def __init__(self, *args, **kwargs):
         super().__init__(*args, funcao="projetos", **kwargs)
         self.task_ids = 'Edital'

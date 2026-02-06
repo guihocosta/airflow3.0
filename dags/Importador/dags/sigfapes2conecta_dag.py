@@ -127,7 +127,7 @@ with DAG(
     default_args=default_args,
     description='DAG de Importação de Dados do Appsmith para o Conecta',
     start_date=datetime(2025, 4, 2),
-    schedule_interval=None,
+    schedule=None,
     max_active_runs=5,
     catchup=False,
     tags=['conecta', 'sigfapes', 'api']

@@ -1,4 +1,3 @@
-from airflow.utils.decorators import apply_defaults
 from concurrent.futures import ThreadPoolExecutor
 from dateutil import parser
 from datetime import timezone
@@ -15,7 +14,6 @@ class EditalOperator(Fapes2ConectaOperator):
         "PossuiProjetosImportados", "DateCreated", "DateUpdated", "DateDeleted", "AreaTecnica"
     ]
 
-    @apply_defaults
     def __init__(self, *args, **kwargs):
         super().__init__(*args, funcao="editais", **kwargs)
 

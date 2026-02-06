@@ -1,10 +1,10 @@
 from airflow import DAG
 from datetime import datetime, timedelta, timezone
 from airflow.models import Variable
-from Importador2.operators.edital_operator import EditalOperator
-from Importador2.operators.projeto_operator import ProjetoOperator
-from Importador2.operators.bolsistas_operator import BolsistasOperator
-from Importador2.plugins.callbacks.alerts import alerta_de_falha
+from Sincronizador.operators.edital_operator import EditalOperator
+from Sincronizador.operators.projeto_operator import ProjetoOperator
+from Sincronizador.operators.bolsistas_operator import BolsistasOperator
+from Sincronizador.plugins.callbacks.alerts import alerta_de_falha
 import jwt
 import base64
 from airflow.decorators import task

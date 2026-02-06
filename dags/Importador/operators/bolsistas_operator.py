@@ -1,4 +1,3 @@
-from airflow.utils.decorators import apply_defaults
 from datetime import timezone
 from dateutil.relativedelta import relativedelta
 from concurrent.futures import ThreadPoolExecutor
@@ -19,7 +18,6 @@ class BolsistasOperator(Fapes2ConectaOperator):
         "PessoaConectaId", "DateCreated", "DateUpdated", "DateDeleted"
     ]
 
-    @apply_defaults
     def __init__(self, *args, **kwargs):
         super().__init__(*args, funcao="bolsistas", **kwargs)
         self.task_ids = 'Projeto'

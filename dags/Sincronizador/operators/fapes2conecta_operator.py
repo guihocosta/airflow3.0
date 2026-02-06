@@ -1,7 +1,6 @@
 import json
 from airflow.providers.postgres.hooks.postgres import PostgresHook
 from ..util.postgre import PostgresQL
-from airflow.utils.decorators import apply_defaults
 from airflow.models.baseoperator import BaseOperator
 import requests
 from airflow.models import Variable
